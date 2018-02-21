@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func newString(s string) string {
+	result := ""
+	for _, c := range s {
+		result = result + string(c)
+		result = result + "#"
+	}
+	return result[:len(result)-1]
+}
+
+func longestPalindrome(s string) string {
+	pLen := make([]int, 1000)
+	max := 0
+	id := 0
+	for i, c := range s {
+		if max > i {
+		    if p[2*id -i] > mx - i {
+				p[i] = max -i
+			}else {
+				p[i] = p[2*id - i]
+			}
+		}
+
+	}
+}
+
+func main() {
+	fmt.Println(newString("acdddd"))
+}
